@@ -13,6 +13,7 @@
 		DA49A45628099D2700DF112C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA49A45428099D2700DF112C /* Main.storyboard */; };
 		DA49A45828099D2E00DF112C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA49A45728099D2E00DF112C /* Assets.xcassets */; };
 		DA49A45B28099D2E00DF112C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA49A45928099D2E00DF112C /* LaunchScreen.storyboard */; };
+		DA7BC6CB280D92600061A47C /* CheckListsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BC6CA280D92600061A47C /* CheckListsGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DA49A45728099D2E00DF112C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA49A45A28099D2E00DF112C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA49A45C28099D2E00DF112C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA7BC6CA280D92600061A47C /* CheckListsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListsGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		DA49A44D28099D2700DF112C /* Checklists */ = {
 			isa = PBXGroup;
 			children = (
+				DA7BC6C9280D922C0061A47C /* Models */,
 				DA49A44E28099D2700DF112C /* AppDelegate.swift */,
 				DA49A45028099D2700DF112C /* SceneDelegate.swift */,
 				DA49A45228099D2700DF112C /* MainViewController.swift */,
@@ -65,6 +68,14 @@
 				DA49A45C28099D2E00DF112C /* Info.plist */,
 			);
 			path = Checklists;
+			sourceTree = "<group>";
+		};
+		DA7BC6C9280D922C0061A47C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA7BC6CA280D92600061A47C /* CheckListsGroup.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				DA49A45328099D2700DF112C /* MainViewController.swift in Sources */,
 				DA49A44F28099D2700DF112C /* AppDelegate.swift in Sources */,
+				DA7BC6CB280D92600061A47C /* CheckListsGroup.swift in Sources */,
 				DA49A45128099D2700DF112C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
