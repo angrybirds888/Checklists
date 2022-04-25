@@ -24,55 +24,80 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name the item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVG-K3-wZ8">
-                                            <rect key="frame" x="20" y="39" width="369" height="34"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name the item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVG-K3-wZ8">
+                                            <rect key="frame" x="36" y="19" width="342" height="74"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="iCW-Ab-KCd"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lVG-K3-wZ8" firstAttribute="top" secondItem="g4M-dn-TjF" secondAttribute="topMargin" constant="8" id="62b-cY-NIm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lVG-K3-wZ8" secondAttribute="trailing" constant="16" id="drN-4q-ibA"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lVG-K3-wZ8" secondAttribute="bottom" constant="8" id="k1x-oI-7sG"/>
+                                        <constraint firstItem="lVG-K3-wZ8" firstAttribute="leading" secondItem="g4M-dn-TjF" secondAttribute="leadingMargin" constant="16" id="wOh-lA-8Ev"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SwitchCell" id="EIj-zG-EbS" customClass="SwitchTableViewCell" customModule="Checklists" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="156.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="156.5" width="414" height="46.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EIj-zG-EbS" id="r8M-Kh-W0D">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remind me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHk-S2-VlI">
-                                            <rect key="frame" x="34" y="8" width="112" height="28"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHk-S2-VlI">
+                                            <rect key="frame" x="16" y="9.5" width="112" height="28"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YWN-XV-xdo">
-                                            <rect key="frame" x="329" y="5" width="49" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YWN-XV-xdo">
+                                            <rect key="frame" x="349" y="8" width="51" height="30.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="SBU-mo-fJf"/>
+                                            </constraints>
                                         </switch>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="YWN-XV-xdo" firstAttribute="centerY" secondItem="OHk-S2-VlI" secondAttribute="centerY" id="0Fe-Ko-Fvy"/>
+                                        <constraint firstItem="OHk-S2-VlI" firstAttribute="leading" secondItem="r8M-Kh-W0D" secondAttribute="leading" constant="16" id="EZ2-X1-vXX"/>
+                                        <constraint firstAttribute="bottom" secondItem="YWN-XV-xdo" secondAttribute="bottom" constant="8" id="Qzg-QR-ZyR"/>
+                                        <constraint firstAttribute="trailing" secondItem="YWN-XV-xdo" secondAttribute="trailing" constant="16" id="Z7w-X2-bDX"/>
+                                        <constraint firstItem="YWN-XV-xdo" firstAttribute="top" secondItem="r8M-Kh-W0D" secondAttribute="top" constant="8" id="zkg-AM-Phv"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateCell" id="U8z-YB-tyA" customClass="DateTableViewCell" customModule="Checklists" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="200" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="203" width="414" height="51.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U8z-YB-tyA" id="rfk-Ja-q6W" customClass="TextTableViewCell" customModule="Checklists" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Eq0-eK-s82">
-                                            <rect key="frame" x="105" y="-50" width="309" height="141"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Eq0-eK-s82">
+                                            <rect key="frame" x="198" y="8" width="200" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="Rhm-k4-PkX"/>
+                                                <constraint firstAttribute="height" constant="35" id="miD-Hh-6Tw"/>
+                                            </constraints>
                                         </datePicker>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Due Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdk-1Y-U0s">
-                                            <rect key="frame" x="20" y="11" width="71" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdk-1Y-U0s">
+                                            <rect key="frame" x="36" y="15.5" width="71" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Eq0-eK-s82" firstAttribute="top" secondItem="rfk-Ja-q6W" secondAttribute="top" constant="8" id="C1D-yI-KaS"/>
+                                        <constraint firstItem="hdk-1Y-U0s" firstAttribute="leading" secondItem="rfk-Ja-q6W" secondAttribute="leadingMargin" constant="16" id="HtT-Ae-JNA"/>
+                                        <constraint firstItem="Eq0-eK-s82" firstAttribute="centerY" secondItem="hdk-1Y-U0s" secondAttribute="centerY" id="IGT-IW-7li"/>
+                                        <constraint firstAttribute="trailing" secondItem="Eq0-eK-s82" secondAttribute="trailing" constant="16" id="Xpp-Lc-q6P"/>
+                                        <constraint firstAttribute="bottom" secondItem="Eq0-eK-s82" secondAttribute="bottom" constant="8" id="bD9-Hn-16t"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
