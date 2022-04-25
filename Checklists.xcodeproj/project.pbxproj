@@ -18,6 +18,10 @@
 		DA49A45828099D2E00DF112C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA49A45728099D2E00DF112C /* Assets.xcassets */; };
 		DA49A45B28099D2E00DF112C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA49A45928099D2E00DF112C /* LaunchScreen.storyboard */; };
 		DA7BC6CB280D92600061A47C /* CheckListsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BC6CA280D92600061A47C /* CheckListsGroup.swift */; };
+		DAA61A3A2816BF2700042F6A /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA61A392816BF2700042F6A /* TextTableViewCell.swift */; };
+		DAA61A3C2816C69400042F6A /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA61A3B2816C69400042F6A /* SwitchTableViewCell.swift */; };
+		DAA61A3E2816C76800042F6A /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA61A3D2816C76800042F6A /* DateTableViewCell.swift */; };
+		DAA61A402816C91100042F6A /* AddItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA61A3F2816C91100042F6A /* AddItemTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		DA49A45A28099D2E00DF112C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA49A45C28099D2E00DF112C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA7BC6CA280D92600061A47C /* CheckListsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListsGroup.swift; sourceTree = "<group>"; };
+		DAA61A392816BF2700042F6A /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		DAA61A3B2816C69400042F6A /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		DAA61A3D2816C76800042F6A /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		DAA61A3F2816C91100042F6A /* AddItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,9 @@
 			children = (
 				DA0DFFB428103A50005A80EF /* GroupTableViewCell.swift */,
 				DA144AD62812E16F006DFA42 /* ItemTableViewCell.swift */,
+				DAA61A392816BF2700042F6A /* TextTableViewCell.swift */,
+				DAA61A3B2816C69400042F6A /* SwitchTableViewCell.swift */,
+				DAA61A3D2816C76800042F6A /* DateTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -61,6 +72,7 @@
 			children = (
 				DA49A45228099D2700DF112C /* MainViewController.swift */,
 				DA144AD02812CC29006DFA42 /* GroupDetailsTableViewController.swift */,
+				DAA61A3F2816C91100042F6A /* AddItemTableViewController.swift */,
 			);
 			path = Controlles;
 			sourceTree = "<group>";
@@ -177,13 +189,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA61A3A2816BF2700042F6A /* TextTableViewCell.swift in Sources */,
 				DA49A45328099D2700DF112C /* MainViewController.swift in Sources */,
 				DA49A44F28099D2700DF112C /* AppDelegate.swift in Sources */,
 				DA144AD12812CC29006DFA42 /* GroupDetailsTableViewController.swift in Sources */,
 				DA7BC6CB280D92600061A47C /* CheckListsGroup.swift in Sources */,
 				DA144AD72812E16F006DFA42 /* ItemTableViewCell.swift in Sources */,
+				DAA61A3C2816C69400042F6A /* SwitchTableViewCell.swift in Sources */,
 				DA144AD32812CE06006DFA42 /* ChecklistsItem.swift in Sources */,
+				DAA61A402816C91100042F6A /* AddItemTableViewController.swift in Sources */,
 				DA49A45128099D2700DF112C /* SceneDelegate.swift in Sources */,
+				DAA61A3E2816C76800042F6A /* DateTableViewCell.swift in Sources */,
 				DA0DFFB528103A50005A80EF /* GroupTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

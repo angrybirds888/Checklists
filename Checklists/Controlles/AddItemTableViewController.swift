@@ -1,22 +1,13 @@
 //
-//  GroupDetailsTableViewController.swift
+//  AddItemTableViewController.swift
 //  Checklists
 //
-//  Created by ASDiMac5 on 22/04/22.
+//  Created by ASDiMac5 on 25/04/22.
 //
 
 import UIKit
 
-
-class GroupDetailsTableViewController: UITableViewController {
-    
-    var items: [ChecklistsItem] = [ChecklistsItem(isChecked: true, name: "Walk the dog"),
-                                  ChecklistsItem(isChecked: true, name: "Brush teeth"),
-                                  ChecklistsItem(isChecked: false, name: "Learn iOS development"),
-                                  ChecklistsItem(isChecked: false, name: "Soccer practice"),
-                                  ChecklistsItem(isChecked: true, name: "Eat ice cream"),
-                                  ChecklistsItem(isChecked: false, name: "Kill Bill")]
-
+class AddItemTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,29 +22,33 @@ class GroupDetailsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+        return 3    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return 1
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistsItems", for: indexPath) as! ItemTableViewCell
-        let item = items[indexPath.row]
-        cell.titleLabel.text = item.name
-        cell.checkmarkIcon.isHidden =    !item.isChecked
+        
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextTableViewCell
+        
         return cell
+        
     }
+        else if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SwitchCell", for: indexPath) as! SwitchTableViewCell
+            return cell
+        }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell", for: indexPath) as! DateTableViewCell
+            return cell
+        }
     }
-    */
+   
+
 
     /*
     // Override to support editing the table view.
