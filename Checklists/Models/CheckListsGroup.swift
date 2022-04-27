@@ -10,6 +10,7 @@ import Foundation
 struct ChecklistGroup {
     var title : String
     var imageName : String
+    var items: [ChecklistsItem]
     
 }
 
