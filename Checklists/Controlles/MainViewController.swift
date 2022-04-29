@@ -38,14 +38,14 @@ class MainViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MainToGroupDetails" {
-            print("Sending an info")
             if let viewCon = segue.destination as? GroupDetailsTableViewController {
-            if let indexPath = tableView.indexPathForSelectedRow {
-            viewCon.items = groups[indexPath.row].items
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    viewCon.title = groups[indexPath.row].title
+                    viewCon.items = groups[indexPath.row].items
+          
                 }
             }
         }
         
     }
 }
-
