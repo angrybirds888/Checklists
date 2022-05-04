@@ -24,7 +24,16 @@ class AddItemTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3    }
+        if let item = item {
+            if item.remindME {
+                return 3
+            } else {
+                return 2
+            }
+        } else {
+            return 3
+        }
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -45,11 +54,16 @@ class AddItemTableViewController: UITableViewController {
     }
         else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SwitchCell", for: indexPath) as! SwitchTableViewCell
+            cell.remindMeSwitcher.setOn(item?.remindME ?? false, animated: true)
             return cell
         }
 
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell", for: indexPath) as! DateTableViewCell
+            if let item = item,
+               let date = item.dueDate {
+                cell.datePicker.setDate(date, animated: true)
+            }
             return cell
         }
     }

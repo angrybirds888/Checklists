@@ -61,6 +61,9 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="SBU-mo-fJf"/>
                                             </constraints>
+                                            <connections>
+                                                <action selector="switchDidChange:" destination="EIj-zG-EbS" eventType="valueChanged" id="k2i-Bb-g2I"/>
+                                            </connections>
                                         </switch>
                                     </subviews>
                                     <constraints>
@@ -71,6 +74,9 @@
                                         <constraint firstItem="YWN-XV-xdo" firstAttribute="top" secondItem="r8M-Kh-W0D" secondAttribute="top" constant="8" id="zkg-AM-Phv"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="remindMeSwitcher" destination="YWN-XV-xdo" id="Yl2-Ym-6NF"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateCell" rowHeight="59" id="U8z-YB-tyA" customClass="DateTableViewCell" customModule="Checklists" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="226.5" width="414" height="59"/>
@@ -101,6 +107,9 @@
                                         <constraint firstAttribute="bottom" secondItem="Eq0-eK-s82" secondAttribute="bottom" constant="8" id="bD9-Hn-16t"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="datePicker" destination="Eq0-eK-s82" id="247-De-OAe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>

@@ -8,13 +8,13 @@
 import UIKit
 
 class MainViewController: UITableViewController {
-    let groups: [ChecklistGroup] = [
+    let groups: [ChecklistGroup] =
+    [
         ChecklistGroup(title: "Birthdays", imageName: "Birthdays", items: [
-            ChecklistsItem(isChecked: true, name: "Selena's Birthday")
-        ]),
-        ChecklistGroup(title: "Groceries", imageName: "Groceries", items: [ChecklistsItem(isChecked: true, name: "Apples, Juice, Blueberries")]),
-        ChecklistGroup(title: "To Do", imageName: "Inbox", items: [ChecklistsItem(isChecked: true, name: "Clean the house")]),
-        ChecklistGroup(title: "Business Stuff", imageName: "Folder", items: [ChecklistsItem(isChecked: false, name: "Buy a car")])
+        ChecklistsItem(isChecked: true, name: "Selena's Birthday", remindME: false, dueDate: nil)]),
+        ChecklistGroup(title: "Groceries", imageName: "Groceries", items: [ChecklistsItem(isChecked: true, name: "Apples, Juice, Blueberries", remindME: true)]),
+        ChecklistGroup(title: "To Do", imageName: "Inbox", items: [ChecklistsItem(isChecked: true, name: "Clean the house", remindME: false)]),
+        ChecklistGroup(title: "Business Stuff", imageName: "Folder", items: [ChecklistsItem(isChecked: false, name: "Buy a car", remindME: true)])
     ]
     
     override func viewDidLoad() {

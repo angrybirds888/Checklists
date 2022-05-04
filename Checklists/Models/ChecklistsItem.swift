@@ -10,4 +10,6 @@ import Foundation
 struct ChecklistsItem {
     var isChecked: Bool
     var name : String
-}
+    var remindME : Bool
+    var dueDate : Date?
+} 
