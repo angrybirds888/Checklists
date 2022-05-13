@@ -18,6 +18,7 @@
 		DA49A45828099D2E00DF112C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA49A45728099D2E00DF112C /* Assets.xcassets */; };
 		DA49A45B28099D2E00DF112C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA49A45928099D2E00DF112C /* LaunchScreen.storyboard */; };
 		DA7BC6CB280D92600061A47C /* CheckListsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BC6CA280D92600061A47C /* CheckListsGroup.swift */; };
+		DA88F2C4282E8DA500C2A434 /* GroupDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA88F2C3282E8DA500C2A434 /* GroupDetailsProtocol.swift */; };
 		DAA61A3A2816BF2700042F6A /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA61A392816BF2700042F6A /* TextTableViewCell.swift */; };
 		DAA61A3C2816C69400042F6A /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA61A3B2816C69400042F6A /* SwitchTableViewCell.swift */; };
 		DAA61A3E2816C76800042F6A /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA61A3D2816C76800042F6A /* DateTableViewCell.swift */; };
@@ -38,6 +39,7 @@
 		DA49A45A28099D2E00DF112C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA49A45C28099D2E00DF112C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA7BC6CA280D92600061A47C /* CheckListsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListsGroup.swift; sourceTree = "<group>"; };
+		DA88F2C3282E8DA500C2A434 /* GroupDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailsProtocol.swift; sourceTree = "<group>"; };
 		DAA61A392816BF2700042F6A /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		DAA61A3B2816C69400042F6A /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		DAA61A3D2816C76800042F6A /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		DA49A44D28099D2700DF112C /* Checklists */ = {
 			isa = PBXGroup;
 			children = (
+				DA88F2C5282E8DE800C2A434 /* Protocol */,
 				DA144ACF2812C93D006DFA42 /* Controlles */,
 				DA0DFFB32810399C005A80EF /* Cells */,
 				DA7BC6C9280D922C0061A47C /* Models */,
@@ -116,6 +119,14 @@
 				DA144AD22812CE06006DFA42 /* ChecklistsItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DA88F2C5282E8DE800C2A434 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DA88F2C3282E8DA500C2A434 /* GroupDetailsProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +205,7 @@
 				DA49A44F28099D2700DF112C /* AppDelegate.swift in Sources */,
 				DA144AD12812CC29006DFA42 /* GroupDetailsTableViewController.swift in Sources */,
 				DA7BC6CB280D92600061A47C /* CheckListsGroup.swift in Sources */,
+				DA88F2C4282E8DA500C2A434 /* GroupDetailsProtocol.swift in Sources */,
 				DA144AD72812E16F006DFA42 /* ItemTableViewCell.swift in Sources */,
 				DAA61A3C2816C69400042F6A /* SwitchTableViewCell.swift in Sources */,
 				DA144AD32812CE06006DFA42 /* ChecklistsItem.swift in Sources */,

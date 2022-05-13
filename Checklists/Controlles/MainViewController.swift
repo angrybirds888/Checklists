@@ -7,8 +7,20 @@
 
 import UIKit
 
-class MainViewController: UITableViewController {
-    let groups: [ChecklistGroup] =
+class MainViewController: UITableViewController, GroupDetailsProtocol {
+    // Mark: - GroupDeleteProtocol
+    func didDeleteItem(at index: Int, with groupTitle: String) {
+        for (groupIndex, group) in groups.enumerated() {
+            if group.title == groupTitle {
+                groups[groupIndex].items.remove(at: index)
+            }
+        }
+    }
+    
+    
+// Mark: - data layer
+    
+    var groups: [ChecklistGroup] =
     [
         ChecklistGroup(title: "Birthdays", imageName: "Birthdays", items: [
             ChecklistsItem(isChecked: true, name: "Selena's Birthday", remindME: false, dueDate: nil)]),
@@ -20,10 +32,14 @@ class MainViewController: UITableViewController {
             ChecklistsItem(isChecked: false, name: "Buy a car", remindME: true)])
     ]
     
+    // Mark: - Life cycle of View Controller
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    // Mark: - Data Source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         groups.count
@@ -45,11 +61,13 @@ class MainViewController: UITableViewController {
             if let viewCon = segue.destination as? GroupDetailsTableViewController {
                 if let indexPath = tableView.indexPathForSelectedRow {
                     viewCon.title = groups[indexPath.row].title
-                    viewCon.items = groups[indexPath.row].items
+                    viewCon.group = groups[indexPath.row]
+                    viewCon.delegate = self
           
                 }
             }
         }
         
     }
-}
+    }
+

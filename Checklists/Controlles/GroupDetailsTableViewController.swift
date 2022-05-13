@@ -10,7 +10,8 @@ import UIKit
 
 class GroupDetailsTableViewController: UITableViewController {
     
-    var items: [ChecklistsItem] = []
+    var group: ChecklistGroup!
+    var delegate: GroupDetailsProtocol?
 
 
     override func viewDidLoad() {
@@ -25,13 +26,13 @@ class GroupDetailsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return group.items.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistsItems", for: indexPath) as! ItemTableViewCell
         
-        let item = items[indexPath.row]
+        let item = group.items[indexPath.row]
         cell.titleLabel.text = item.name
         
         return cell
@@ -43,7 +44,17 @@ class GroupDetailsTableViewController: UITableViewController {
             let viewCon = segue.destination as? AddItemTableViewController,
             let indexPath = tableView.indexPathForSelectedRow {
             viewCon.title = "Edit item"
-            viewCon.item = items[indexPath.row]
+            viewCon.item = group.items[indexPath.row]
         }
+    }
+    // Mark: - UITableViewDelegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("We just tapped \(indexPath.row)")
+        
+    }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        group.items.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        delegate?.didDeleteItem(at: indexPath.row, with: group.title)
     }
 }
