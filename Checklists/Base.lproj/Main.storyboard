@@ -115,6 +115,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Item" id="azG-GF-f0r">
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="YVz-v6-Yeq"/>
+                        <barButtonItem key="rightBarButtonItem" title="SAVE" id="hPl-3c-IGZ">
+                            <connections>
+                                <action selector="SaveItem:" destination="m2N-1A-bCI" id="VKF-xA-YPo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bo-1q-Kol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

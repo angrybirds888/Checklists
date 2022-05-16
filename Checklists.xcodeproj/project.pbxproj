@@ -23,6 +23,7 @@
 		DAA61A3C2816C69400042F6A /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA61A3B2816C69400042F6A /* SwitchTableViewCell.swift */; };
 		DAA61A3E2816C76800042F6A /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA61A3D2816C76800042F6A /* DateTableViewCell.swift */; };
 		DAA61A402816C91100042F6A /* AddItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA61A3F2816C91100042F6A /* AddItemTableViewController.swift */; };
+		DAD26EE028327BB300FFA502 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD26EDF28327BB300FFA502 /* Notifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		DAA61A3B2816C69400042F6A /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		DAA61A3D2816C76800042F6A /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
 		DAA61A3F2816C91100042F6A /* AddItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableViewController.swift; sourceTree = "<group>"; };
+		DAD26EDF28327BB300FFA502 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		DA49A44D28099D2700DF112C /* Checklists */ = {
 			isa = PBXGroup;
 			children = (
+				DAD26EDD28327B3700FFA502 /* Extensions */,
 				DA88F2C5282E8DE800C2A434 /* Protocol */,
 				DA144ACF2812C93D006DFA42 /* Controlles */,
 				DA0DFFB32810399C005A80EF /* Cells */,
@@ -127,6 +130,14 @@
 				DA88F2C3282E8DA500C2A434 /* GroupDetailsProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		DAD26EDD28327B3700FFA502 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAD26EDF28327BB300FFA502 /* Notifications.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +219,7 @@
 				DA88F2C4282E8DA500C2A434 /* GroupDetailsProtocol.swift in Sources */,
 				DA144AD72812E16F006DFA42 /* ItemTableViewCell.swift in Sources */,
 				DAA61A3C2816C69400042F6A /* SwitchTableViewCell.swift in Sources */,
+				DAD26EE028327BB300FFA502 /* Notifications.swift in Sources */,
 				DA144AD32812CE06006DFA42 /* ChecklistsItem.swift in Sources */,
 				DAA61A402816C91100042F6A /* AddItemTableViewController.swift in Sources */,
 				DA49A45128099D2700DF112C /* SceneDelegate.swift in Sources */,

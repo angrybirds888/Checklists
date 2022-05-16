@@ -36,7 +36,16 @@ class MainViewController: UITableViewController, GroupDetailsProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Add observer
+        NotificationCenter.default.addObserver(self, selector: #selector(handleLetNoteNotification), name: .noteHasBeenCreated, object: Int.self)
+    }
+    @objc
+    func handleLetNoteNotification(_ notification: Notification) {
+        if let object = notification.object as? Int {
+        print("Creating new note")
+        print("Received value: \(object)")
+            
+        }
     }
     
     // Mark: - Data Source
