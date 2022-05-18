@@ -6,10 +6,16 @@
 //
 
 import UIKit
+import Foundation
 
 class AddItemTableViewController: UITableViewController {
     
     var item: ChecklistsItem?
+    
+    var categoryNames: String?
+    var name: String = ""
+    var remindMe: Bool = false
+    var date: Date?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +50,9 @@ class AddItemTableViewController: UITableViewController {
         
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextTableViewCell
-            
+            cell.onChange = { text in
+                self.name = text
+            }
             if let item = item {
                 cell.addItemTextField.text = item.name
             }
@@ -55,6 +63,9 @@ class AddItemTableViewController: UITableViewController {
         else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SwitchCell", for: indexPath) as! SwitchTableViewCell
             cell.remindMeSwitcher.setOn(item?.remindME ?? false, animated: true)
+            cell.onChange = { isOn in
+                self.remindMe = isOn
+            }
             return cell
         }
 
@@ -64,12 +75,22 @@ class AddItemTableViewController: UITableViewController {
                let date = item.dueDate {
                 cell.datePicker.setDate(date, animated: true)
             }
+            cell.onDateChanged = { date in
+                self.date = date
+            }
             return cell
         }
     }
    
     @IBAction func SaveItem(_ sender: Any) {
         NotificationCenter.default.post(name: .noteHasBeenCreated, object: 44)
+        let objects1 = ChecklistsItem(isChecked: false, name: name, remindME: remindMe, dueDate: date)
+        
+        
+        let objects2: (ChecklistsItem, String) = (objects1, categoryNames ?? "No category")
+        NotificationCenter.default.post(name: .noteHasBeenCreated, object: objects2)
+        
+        print(objects2)
     }
     
 

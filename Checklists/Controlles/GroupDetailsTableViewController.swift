@@ -45,6 +45,11 @@ class GroupDetailsTableViewController: UITableViewController {
             let indexPath = tableView.indexPathForSelectedRow {
             viewCon.title = "Edit item"
             viewCon.item = group.items[indexPath.row]
+        } else if segue.identifier == "ThirdScreenSegue" {
+
+            let viewCon = segue.destination as? AddItemTableViewController
+            viewCon?.categoryNames = group.title
+            
         }
     }
     // Mark: - UITableViewDelegate

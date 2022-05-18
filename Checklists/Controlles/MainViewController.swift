@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class MainViewController: UITableViewController, GroupDetailsProtocol {
     // Mark: - GroupDeleteProtocol
@@ -39,11 +40,12 @@ class MainViewController: UITableViewController, GroupDetailsProtocol {
         // Add observer
         NotificationCenter.default.addObserver(self, selector: #selector(handleLetNoteNotification), name: .noteHasBeenCreated, object: Int.self)
     }
+    
     @objc
     func handleLetNoteNotification(_ notification: Notification) {
-        if let object = notification.object as? Int {
-        print("Creating new note")
-        print("Received value: \(object)")
+        if let object = notification.object as? (ChecklistsItem, String) {
+            print("Creating new note")
+            print("Received value: \(object)")
             
         }
     }

@@ -9,6 +9,8 @@ import UIKit
 
 class TextTableViewCell: UITableViewCell {
     
+    var onChange: ((String) -> Void)?
+    
     @IBOutlet weak var addItemTextField: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,4 +23,10 @@ class TextTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func textEditingChanged(_ sender: UITextField) {
+        print(sender.text)
+        if let text = sender.text {
+            onChange?(text)
+        }
+    }
 }

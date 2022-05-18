@@ -8,7 +8,11 @@
 import UIKit
 
 class DateTableViewCell: UITableViewCell {
+    
+    var onDateChanged: ((Date) -> Void)?
+    
     @IBOutlet weak var datePicker: UIDatePicker!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,7 +22,9 @@ class DateTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
+    @IBAction func dateEditingChanged(_ sender: UIDatePicker) {
+        onDateChanged?(sender.date)
+    }
 }
