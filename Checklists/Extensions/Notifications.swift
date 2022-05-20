@@ -8,7 +8,9 @@
 import Foundation
 
 extension Notification.Name{
- static let noteHasBeenCreated: Notification.Name = Notification.Name("CLNoteHasBeenCreated")
+    static let noteHasBeenCreated: Notification.Name = Notification.Name("CLNoteHasBeenCreated")
+    static let noteHasBeenUpdated: Notification.Name = Notification.Name("CLNoteHasBeenUpdated")
     
 }
+
 

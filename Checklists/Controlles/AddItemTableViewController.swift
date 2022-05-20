@@ -83,13 +83,25 @@ class AddItemTableViewController: UITableViewController {
     }
    
     @IBAction func SaveItem(_ sender: Any) {
-        NotificationCenter.default.post(name: .noteHasBeenCreated, object: 44)
-        let object1 = ChecklistsItem(isChecked: false, name: name, remindME: remindMe, dueDate: date)
-        let object2: (ChecklistsItem, String) = (object1, categoryName ?? "No category")
-        NotificationCenter.default.post(name: .noteHasBeenCreated, object: object2)
-        print(object2)
+       
+       
         
-        navigationController?.popToRootViewController(animated: true)
+        /// edit
+        if var item = item {
+            item.name = name
+            item.remindME = remindMe
+            item.dueDate = date
+            NotificationCenter.default.post(name: .noteHasBeenUpdated, object: item)
+            navigationController?.popToRootViewController(animated: true)
+           
+        } else {
+            let object1 = ChecklistsItem(isChecked: false, name: name, remindME: remindMe, dueDate: date)
+            let object2: (ChecklistsItem, String) = (object1, categoryName ?? "No category")
+            NotificationCenter.default.post(name: .noteHasBeenCreated, object: object2)
+            print(object2)
+            navigationController?.popToRootViewController(animated: true)
+            
+        }
     }
     
 

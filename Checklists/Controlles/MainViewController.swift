@@ -38,7 +38,13 @@ class MainViewController: UITableViewController, GroupDetailsProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Add observer
-        NotificationCenter.default.addObserver(self, selector: #selector(handleLetNoteNotification), name: .noteHasBeenCreated, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNoteUpdateNotification), name: .noteHasBeenUpdated, object: nil)
+        NotificationCenter.default.addObserver( self, selector: #selector(handleLetNoteNotification), name: .noteHasBeenCreated, object: nil)
+    }
+    
+    @objc
+    func handleNoteUpdateNotification(_ notification: Notification) {
+        print("Note has been updated")
     }
     
     @objc
