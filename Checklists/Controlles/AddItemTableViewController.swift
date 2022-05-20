@@ -12,7 +12,7 @@ class AddItemTableViewController: UITableViewController {
     
     var item: ChecklistsItem?
     
-    var categoryNames: String?
+    var categoryName: String?
     var name: String = ""
     var remindMe: Bool = false
     var date: Date?
@@ -84,13 +84,12 @@ class AddItemTableViewController: UITableViewController {
    
     @IBAction func SaveItem(_ sender: Any) {
         NotificationCenter.default.post(name: .noteHasBeenCreated, object: 44)
-        let objects1 = ChecklistsItem(isChecked: false, name: name, remindME: remindMe, dueDate: date)
+        let object1 = ChecklistsItem(isChecked: false, name: name, remindME: remindMe, dueDate: date)
+        let object2: (ChecklistsItem, String) = (object1, categoryName ?? "No category")
+        NotificationCenter.default.post(name: .noteHasBeenCreated, object: object2)
+        print(object2)
         
-        
-        let objects2: (ChecklistsItem, String) = (objects1, categoryNames ?? "No category")
-        NotificationCenter.default.post(name: .noteHasBeenCreated, object: objects2)
-        
-        print(objects2)
+        navigationController?.popToRootViewController(animated: true)
     }
     
 

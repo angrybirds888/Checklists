@@ -38,15 +38,24 @@ class MainViewController: UITableViewController, GroupDetailsProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Add observer
-        NotificationCenter.default.addObserver(self, selector: #selector(handleLetNoteNotification), name: .noteHasBeenCreated, object: Int.self)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleLetNoteNotification), name: .noteHasBeenCreated, object: nil)
     }
     
     @objc
     func handleLetNoteNotification(_ notification: Notification) {
+        print("asdasd")
         if let object = notification.object as? (ChecklistsItem, String) {
             print("Creating new note")
             print("Received value: \(object)")
-            
+            for (index, group) in groups.enumerated() {
+                if group.title == object.1 {
+                   // group.items.append(object.0)
+                    groups[index].items.append(object.0)
+                    print(group.items)
+                    tableView.reloadData()
+                }
+            }
+          
         }
     }
     

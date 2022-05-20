@@ -48,7 +48,7 @@ class GroupDetailsTableViewController: UITableViewController {
         } else if segue.identifier == "ThirdScreenSegue" {
 
             let viewCon = segue.destination as? AddItemTableViewController
-            viewCon?.categoryNames = group.title
+            viewCon?.categoryName = group.title
             
         }
     }
